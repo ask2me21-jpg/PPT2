@@ -17,7 +17,7 @@
 :root{
   --bg:#070b18;
   --text:#f1f5ff;
-  --muted:#a3b0d0;
+  --muted:#a9b6d6;
   --line:rgba(255,255,255,.11);
   --card:rgba(255,255,255,.05);
   --g1:#7c5cff;
@@ -49,7 +49,7 @@ body{
 /* ================= SLIDES ================= */
 .slide{
   position:absolute;inset:0;
-  padding:44px 58px 60px;
+  padding:38px 56px 60px;
   display:flex;flex-direction:column;
   opacity:0;visibility:hidden;
   transform:translate3d(0,22px,0);
@@ -70,13 +70,13 @@ body{
 .slide.active .anim:nth-child(7){animation-delay:.41s}
 
 /* ================= TYPE ================= */
-h1{font-family:'Poppins',sans-serif;font-size:60px;line-height:1.05;letter-spacing:-.03em;font-weight:800}
-h2{font-family:'Poppins',sans-serif;font-size:36px;line-height:1.14;letter-spacing:-.02em;font-weight:700;margin-top:12px}
-h3{font-size:19px;font-weight:600;line-height:1.3}
+h1{font-family:'Poppins',sans-serif;font-size:62px;line-height:1.04;letter-spacing:-.03em;font-weight:800}
+h2{font-family:'Poppins',sans-serif;font-size:38px;line-height:1.12;letter-spacing:-.02em;font-weight:700;margin-top:10px}
+h3{font-size:21px;font-weight:600;line-height:1.25}
 .grad{background:linear-gradient(100deg,#a78bfa,#22d3ee 58%,#f472b6);
       -webkit-background-clip:text;background-clip:text;color:transparent}
 
-.head{margin-bottom:20px}
+.head{margin-bottom:16px}
 .kicker{
   display:inline-flex;align-items:center;gap:8px;
   font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
@@ -84,22 +84,21 @@ h3{font-size:19px;font-weight:600;line-height:1.3}
   border:1px solid rgba(124,92,255,.32);
   padding:6px 14px;border-radius:999px;width:fit-content;
 }
-.sub{color:var(--muted);font-size:15px;line-height:1.5;margin-top:7px;max-width:900px}
+.sub{color:var(--muted);font-size:15.5px;line-height:1.45;margin-top:6px;max-width:900px}
 
 /* ================= LAYOUT ================= */
 .body{flex:1;min-height:0;display:grid;gap:14px}
 .g2{grid-template-columns:1fr 1fr}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
-.rows2{grid-template-rows:repeat(2,1fr)}
-.center{align-content:center}
+.center{align-content:center;align-items:center}
 
 /* ================= CARDS ================= */
 .card{
   position:relative;overflow:hidden;
   background:var(--card);border:1px solid var(--line);
   border-radius:var(--r);padding:20px;
-  display:flex;flex-direction:column;gap:11px;
+  display:flex;flex-direction:column;gap:10px;
   transition:border-color .3s,transform .3s;
 }
 .card::after{
@@ -110,17 +109,24 @@ h3{font-size:19px;font-weight:600;line-height:1.3}
 .card:hover{border-color:rgba(124,92,255,.45);transform:translateY(-2px)}
 .card:hover::after{opacity:1}
 
+/* ============ BIG, COLORFUL ICONS ============ */
 .ic{
-  width:50px;height:50px;border-radius:15px;flex:none;
-  display:grid;place-items:center;font-size:21px;color:#d3ccff;
-  background:linear-gradient(135deg,rgba(124,92,255,.28),rgba(34,211,238,.16));
-  border:1px solid rgba(255,255,255,.13);
+  width:78px;height:78px;border-radius:23px;flex:none;
+  display:grid;place-items:center;font-size:35px;color:#fff;
+  background:linear-gradient(140deg,#a78bfa,#7c3aed);
+  box-shadow:0 12px 30px rgba(124,92,255,.42), inset 0 1px 0 rgba(255,255,255,.30);
 }
-.ic.cyan{color:#a5f3fc;background:linear-gradient(135deg,rgba(34,211,238,.28),rgba(124,92,255,.14))}
-.ic.pink{color:#fbcfe8;background:linear-gradient(135deg,rgba(244,114,182,.28),rgba(124,92,255,.14))}
-.ic.green{color:#a7f3d0;background:linear-gradient(135deg,rgba(52,211,153,.26),rgba(34,211,238,.14))}
-.ic.amber{color:#fde68a;background:linear-gradient(135deg,rgba(251,191,36,.26),rgba(244,114,182,.14))}
-.ic.red{color:#fecdd3;background:linear-gradient(135deg,rgba(251,113,133,.26),rgba(244,114,182,.14))}
+.ic.xl{width:96px;height:96px;font-size:43px;border-radius:28px}
+
+.ic.cyan{background:linear-gradient(140deg,#22d3ee,#0891b2);box-shadow:0 12px 30px rgba(34,211,238,.42), inset 0 1px 0 rgba(255,255,255,.32)}
+.ic.pink{background:linear-gradient(140deg,#f472b6,#db2777);box-shadow:0 12px 30px rgba(244,114,182,.40), inset 0 1px 0 rgba(255,255,255,.32)}
+.ic.green{background:linear-gradient(140deg,#34d399,#059669);box-shadow:0 12px 30px rgba(52,211,153,.40), inset 0 1px 0 rgba(255,255,255,.32)}
+.ic.amber{background:linear-gradient(140deg,#fbbf24,#d97706);box-shadow:0 12px 30px rgba(251,191,36,.38), inset 0 1px 0 rgba(255,255,255,.34)}
+.ic.blue{background:linear-gradient(140deg,#60a5fa,#2563eb);box-shadow:0 12px 30px rgba(96,165,250,.40), inset 0 1px 0 rgba(255,255,255,.32)}
+.ic.orange{background:linear-gradient(140deg,#fb923c,#ea580c);box-shadow:0 12px 30px rgba(251,146,60,.40), inset 0 1px 0 rgba(255,255,255,.34)}
+.ic.red{background:linear-gradient(140deg,#fb7185,#e11d48);box-shadow:0 12px 30px rgba(251,113,133,.40), inset 0 1px 0 rgba(255,255,255,.32)}
+.ic.lime{background:linear-gradient(140deg,#a3e635,#65a30d);box-shadow:0 12px 30px rgba(163,230,53,.36), inset 0 1px 0 rgba(255,255,255,.34)}
+.ic.violet{background:linear-gradient(140deg,#c084fc,#7c3aed);box-shadow:0 12px 30px rgba(192,132,252,.40), inset 0 1px 0 rgba(255,255,255,.32)}
 
 /* do / don't cards */
 .card.do{border-color:rgba(52,211,153,.34);background:rgba(52,211,153,.055)}
@@ -131,44 +137,43 @@ h3{font-size:19px;font-weight:600;line-height:1.3}
 /* ================= LISTS ================= */
 ul.list{list-style:none;display:grid;gap:9px}
 ul.list li{
-  position:relative;padding-left:23px;
-  font-size:16.5px;line-height:1.45;color:var(--muted);
+  position:relative;padding-left:25px;
+  font-size:17.5px;line-height:1.3;color:var(--text);font-weight:500;
 }
 ul.list li::before{
-  content:'';position:absolute;left:0;top:8px;
-  width:8px;height:8px;border-radius:2px;
+  content:'';position:absolute;left:0;top:9px;
+  width:9px;height:9px;border-radius:3px;
   background:linear-gradient(135deg,var(--g1),var(--g2));
 }
-ul.list li b{color:var(--text);font-weight:600}
-
 ul.tick li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;
-  font-size:12px;color:var(--green);background:none;top:1px;width:auto;height:auto}
+  font-size:14px;color:var(--green);background:none;top:2px;width:auto;height:auto}
 ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weight:900;
-  font-size:12px;color:var(--red);background:none;top:1px;width:auto;height:auto}
+  font-size:14px;color:var(--red);background:none;top:2px;width:auto;height:auto}
+ul.list li small{display:block;font-size:13.5px;color:var(--muted);font-weight:400;margin-top:3px}
 
 /* ================= SMALL PIECES ================= */
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .chip{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;padding:9px 16px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:14px;padding:10px 18px;border-radius:999px;
   background:rgba(255,255,255,.05);border:1px solid var(--line);color:#d3dcf5;
 }
-.chip i{color:var(--g2)}
+.chip i{color:var(--g2);font-size:15px}
 
 .badge{
-  display:inline-flex;align-items:center;gap:8px;width:fit-content;
-  font-size:12.5px;font-weight:600;
-  padding:9px 16px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:9px;width:fit-content;
+  font-size:13px;font-weight:600;
+  padding:10px 18px;border-radius:999px;
   background:rgba(124,92,255,.16);border:1px solid rgba(124,92,255,.36);
   color:#cfc8ff;
 }
-.badge i{color:var(--amber)}
+.badge i{color:var(--amber);font-size:15px}
 
 .cover{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
-.lead{font-size:18px;line-height:1.6;color:var(--muted);max-width:720px}
+.lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:720px}
 
 .note{
-  margin-top:12px;padding:13px 18px;border-radius:13px;font-size:15px;line-height:1.5;
+  margin-top:12px;padding:14px 18px;border-radius:13px;font-size:16px;line-height:1.45;
   color:#dbe4ff;background:rgba(34,211,238,.08);
   border-left:3px solid var(--g2);
 }
@@ -177,73 +182,107 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
 /* numbered rows */
 .truths{gap:10px}
 .row{
-  display:flex;align-items:center;gap:16px;
-  padding:13px 18px;border-radius:15px;
+  display:flex;align-items:center;gap:18px;
+  padding:14px 20px;border-radius:15px;
   background:var(--card);border:1px solid var(--line);
 }
 .row .num{
-  font-family:'Poppins',sans-serif;font-size:21px;font-weight:700;flex:none;min-width:34px;
+  font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;flex:none;min-width:38px;
   background:linear-gradient(135deg,var(--g1),var(--g2));
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.row h3{font-size:16.5px}
-.row p{font-size:14px;color:var(--muted);margin-top:2px;line-height:1.4}
+.row h3{font-size:18px}
 
-/* steps */
-.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;align-content:center}
+/* ============ 7-BLOCK FLOW ============ */
+.flow{
+  display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:13px;
+}
 .step{
-  padding:18px;border-radius:16px;
+  flex:0 0 calc(25% - 13px);
+  padding:15px 12px 16px;border-radius:18px;text-align:center;
   background:var(--card);border:1px solid var(--line);
-  display:flex;flex-direction:column;gap:7px;position:relative;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
 }
 .step .n{
-  font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;
-  background:linear-gradient(135deg,var(--g1),var(--g2));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  line-height:1;
+  font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+  color:#8f9ec4;
 }
-.step i{font-size:19px;color:#c3bbff;margin-top:2px}
-.step h3{font-size:17px}
-.step p{font-size:14px;color:var(--muted);line-height:1.4}
+.step .dot{
+  width:62px;height:62px;border-radius:20px;display:grid;place-items:center;
+  font-size:28px;color:#fff;
+}
+.step h3{font-size:15.5px;line-height:1.2}
+.step p{font-size:12px;color:var(--muted);line-height:1.3}
+
+.step:nth-child(1) .dot{background:linear-gradient(140deg,#a78bfa,#7c3aed);box-shadow:0 8px 22px rgba(124,92,255,.42), inset 0 1px 0 rgba(255,255,255,.3)}
+.step:nth-child(2) .dot{background:linear-gradient(140deg,#fb923c,#ea580c);box-shadow:0 8px 22px rgba(251,146,60,.42), inset 0 1px 0 rgba(255,255,255,.3)}
+.step:nth-child(3) .dot{background:linear-gradient(140deg,#22d3ee,#0891b2);box-shadow:0 8px 22px rgba(34,211,238,.42), inset 0 1px 0 rgba(255,255,255,.3)}
+.step:nth-child(4) .dot{background:linear-gradient(140deg,#f472b6,#db2777);box-shadow:0 8px 22px rgba(244,114,182,.42), inset 0 1px 0 rgba(255,255,255,.3)}
+.step:nth-child(5) .dot{background:linear-gradient(140deg,#34d399,#059669);box-shadow:0 8px 22px rgba(52,211,153,.42), inset 0 1px 0 rgba(255,255,255,.3)}
+.step:nth-child(6) .dot{background:linear-gradient(140deg,#fbbf24,#d97706);box-shadow:0 8px 22px rgba(251,191,36,.40), inset 0 1px 0 rgba(255,255,255,.34)}
+.step:nth-child(7) .dot{background:linear-gradient(140deg,#60a5fa,#2563eb);box-shadow:0 8px 22px rgba(96,165,250,.42), inset 0 1px 0 rgba(255,255,255,.3)}
 
 /* script block */
 .script{
-  font-size:21px;line-height:1.75;color:#e6ecff;font-weight:400;
+  font-size:21px;line-height:1.8;color:#e6ecff;
   padding:24px 26px;border-radius:18px;
   background:rgba(255,255,255,.045);
   border:1px solid var(--line);
 }
 .script .k1{color:#b9a7ff;font-weight:600}
-.script .k2{color:#7ee7f7;font-weight:600}
-.script .k3{color:#ffa8d0;font-weight:600}
-.script .k4{color:#ffd97a;font-weight:600}
-.script .k5{color:#7bf0c0;font-weight:600}
+.script .k2{color:#ffb27a;font-weight:600}
+.script .k3{color:#7ee7f7;font-weight:600}
+.script .k4{color:#ffa8d0;font-weight:600}
+.script .k5{color:#ffd97a;font-weight:600}
+.script .k6{color:#7bf0c0;font-weight:600}
 
-.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:13.5px;color:var(--muted)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13.5px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:7px}
-.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
 
 /* formula */
 .formula{
-  padding:15px 18px;border-radius:13px;font-size:16px;line-height:1.55;
+  padding:15px 18px;border-radius:13px;font-size:17px;line-height:1.5;
   background:rgba(124,92,255,.11);border:1px dashed rgba(124,92,255,.48);
   color:#ded8ff;font-weight:500;
 }
 .formula b{color:#fff}
 
-/* timing bar */
-.bar{display:grid;grid-template-columns:6fr 3fr 1fr;gap:6px;margin-top:auto}
+/* emphasis bar */
+.bar{display:grid;grid-template-columns:2fr 1fr .7fr;gap:6px;margin-top:auto}
 .bar div{
-  height:44px;border-radius:11px;display:grid;place-items:center;
-  font-size:14px;font-weight:600;color:#0a0f1e;
+  height:48px;border-radius:12px;display:grid;place-items:center;
+  font-size:16px;font-weight:700;color:#0a0f1e;
 }
 .bar .b1{background:linear-gradient(135deg,#a78bfa,#7c5cff)}
 .bar .b2{background:linear-gradient(135deg,#22d3ee,#67e8f9)}
 .bar .b3{background:linear-gradient(135deg,#34d399,#6ee7b7)}
 
-/* ================= FOOTER (mentor credit) ================= */
+/* checklist rows */
+.checkline{display:flex;align-items:center;gap:14px;font-size:19px;font-weight:600;line-height:1.25}
+.checkline i{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  font-size:19px;color:#fff;flex:none;
+}
+.checkline.ok i{background:linear-gradient(140deg,#34d399,#059669);box-shadow:0 8px 20px rgba(52,211,153,.4)}
+.checkline.no i{background:linear-gradient(140deg,#fb7185,#e11d48);box-shadow:0 8px 20px rgba(251,113,133,.4)}
+
+/* practical example box */
+.example{
+  margin-top:12px;padding:16px 20px;border-radius:14px;
+  font-size:17px;line-height:1.6;color:#e9efff;
+  background:rgba(251,146,60,.08);
+  border-left:3px solid #fb923c;
+}
+.example b{color:#ffd0a6}
+.example .lbl{
+  display:block;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:#ffb27a;margin-bottom:6px;
+}
+
+/* ================= FOOTER ================= */
 .footer{
-  position:absolute;left:58px;bottom:16px;z-index:5;
+  position:absolute;left:56px;bottom:16px;z-index:5;
   display:inline-flex;align-items:center;gap:9px;
   font-size:12.5px;letter-spacing:.05em;color:#7c8bb0;
   pointer-events:none;
@@ -279,7 +318,7 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
 .hint{position:fixed;right:20px;bottom:26px;font-size:11.5px;color:#5d6b8f;z-index:60;transition:opacity .8s}
 
 /* ============================================================
-   MOBILE — real responsive layout, no tiny scaling
+   MOBILE
    ============================================================ */
 @media (max-width: 900px){
   html,body{height:auto}
@@ -296,27 +335,32 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
   .slide.active .anim{animation:none}
 
   .body.g2,.body.g3,.body.g4{grid-template-columns:1fr}
-  .rows2{grid-template-rows:none}
-  .flow{grid-template-columns:1fr 1fr}
-  .truths{gap:9px}
+
+  .step{flex:0 0 calc(50% - 7px)}
+  .step .dot{width:56px;height:56px;font-size:25px;border-radius:18px}
+  .step h3{font-size:15px}
+  .step p{font-size:12px}
 
   h1{font-size:38px}
   h2{font-size:27px}
+  h3{font-size:18px}
   .lead{font-size:16px}
   .sub{font-size:14px}
-  h3{font-size:17px}
-  .card{padding:17px}
-  .ic{width:44px;height:44px;font-size:18px;border-radius:13px}
-  ul.list li{font-size:15.5px}
+  .card{padding:18px}
+  .ic{width:70px;height:70px;font-size:31px;border-radius:21px}
+  .ic.xl{width:84px;height:84px;font-size:37px;border-radius:24px}
+  ul.list li{font-size:16.5px}
+  ul.list li small{font-size:13px}
   .script{font-size:17px;padding:18px;line-height:1.7}
-  .row{padding:12px 14px}
-  .row h3{font-size:15.5px}
-  .row p{font-size:13px}
-  .formula{font-size:15px}
+  .row{padding:13px 15px}
+  .row h3{font-size:16.5px}
+  .formula{font-size:15.5px}
+  .example{font-size:15.5px;padding:14px 16px}
+  .checkline{font-size:17px;gap:12px}
+  .checkline i{width:36px;height:36px;font-size:17px}
   .hint{display:none}
   .hud{bottom:12px}
 
-  /* footer becomes a small pill above the HUD on phones */
   .footer{
     position:fixed;left:50%;bottom:64px;transform:translateX(-50%);
     padding:6px 15px;border-radius:999px;white-space:nowrap;
@@ -340,400 +384,425 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
       <div class="cover">
         <span class="badge anim"><i class="fa-solid fa-comment-dots"></i> Interview Round 1</span>
         <h1 class="anim">Tell Me<br><span class="grad">About Yourself</span></h1>
-        <p class="lead anim">The 90-second answer that decides how the rest of the interview goes. Built for IT freshers.</p>
+        <p class="lead anim">A clear, confident answer. Built for IT freshers.</p>
         <div class="chips anim">
           <span class="chip"><i class="fa-solid fa-user-graduate"></i> Freshers</span>
-          <span class="chip"><i class="fa-solid fa-list-check"></i> Step-by-step</span>
-          <span class="chip"><i class="fa-solid fa-mobile-screen"></i> Mobile friendly</span>
+          <span class="chip"><i class="fa-solid fa-layer-group"></i> 7 Blocks</span>
+          <span class="chip"><i class="fa-solid fa-mobile-screen"></i> Mobile ready</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ 2 · WHAT THEY REALLY ASK ============ -->
+    <!-- ============ 2 · WHAT THEY ASK ============ -->
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-eye"></i> Understand First</span>
-        <h2>What They Are Really Asking</h2>
-        <p class="sub">It is not a biography. It is a relevance check.</p>
+        <h2>What They Really Ask</h2>
       </div>
       <div class="body g4 center">
         <div class="card anim"><div class="ic"><i class="fa-solid fa-comments"></i></div>
-          <h3>Can you speak clearly?</h3>
-          <ul class="list"><li>Short, structured sentences</li></ul></div>
+          <h3>Speak Clearly</h3>
+          <ul class="list"><li>Short sentences</li></ul></div>
         <div class="card anim"><div class="ic cyan"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Are you relevant?</h3>
-          <ul class="list"><li>Skills match this role</li></ul></div>
+          <h3>Stay Relevant</h3>
+          <ul class="list"><li>Skills match role</li></ul></div>
         <div class="card anim"><div class="ic pink"><i class="fa-solid fa-link"></i></div>
-          <h3>Is your story consistent?</h3>
-          <ul class="list"><li>Resume and words agree</li></ul></div>
+          <h3>Be Consistent</h3>
+          <ul class="list"><li>Resume = words</li></ul></div>
         <div class="card anim"><div class="ic green"><i class="fa-solid fa-people-group"></i></div>
-          <h3>Will you fit the team?</h3>
-          <ul class="list"><li>Attitude and energy</li></ul></div>
+          <h3>Fit The Team</h3>
+          <ul class="list"><li>Attitude matters</li></ul></div>
       </div>
-      <div class="note anim"><b>Golden rule:</b> everything you say must answer one question — “why should we hire you as a fresher?”</div>
+      <div class="note anim"><b>Golden rule:</b> answer only one question — “why hire you?”</div>
     </section>
 
-    <!-- ============ 3 · 6 PART STRUCTURE ============ -->
+    <!-- ============ 3 · 7 BLOCKS ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-layer-group"></i> The Structure</span>
-        <h2>Say It In 6 Blocks</h2>
-        <p class="sub">Same order every time. Practice it until it sounds natural.</p>
+        <span class="kicker"><i class="fa-solid fa-layer-group"></i> Structure</span>
+        <h2>Say It In 7 Blocks</h2>
+        <p class="sub">Keep the order fixed. Keep each block short and precise.</p>
       </div>
-      <div class="body flow center">
-        <div class="step anim"><span class="n">01</span><i class="fa-solid fa-id-badge"></i>
-          <h3>Name &amp; Basics</h3><p>Who you are, in one line</p></div>
-        <div class="step anim"><span class="n">02</span><i class="fa-solid fa-graduation-cap"></i>
-          <h3>Education</h3><p>Degree, college, year</p></div>
-        <div class="step anim"><span class="n">03</span><i class="fa-solid fa-screwdriver-wrench"></i>
-          <h3>Skills</h3><p>3–4 relevant ones</p></div>
-        <div class="step anim"><span class="n">04</span><i class="fa-solid fa-briefcase"></i>
-          <h3>Internship / Projects</h3><p>Proof of work</p></div>
-        <div class="step anim"><span class="n">05</span><i class="fa-solid fa-trophy"></i>
-          <h3>Achievements</h3><p>Numbers and results</p></div>
-        <div class="step anim"><span class="n">06</span><i class="fa-solid fa-flag"></i>
-          <h3>Career Goal</h3><p>Why this role, why now</p></div>
+      <div class="body flow">
+        <div class="step anim"><span class="n">01</span>
+          <div class="dot"><i class="fa-solid fa-id-badge"></i></div>
+          <h3>Name</h3><p>Name + city</p></div>
+
+        <div class="step anim"><span class="n">02</span>
+          <div class="dot"><i class="fa-solid fa-house"></i></div>
+          <h3>Family</h3><p>4 points</p></div>
+
+        <div class="step anim"><span class="n">03</span>
+          <div class="dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Education</h3><p>Degree + year</p></div>
+
+        <div class="step anim"><span class="n">04</span>
+          <div class="dot"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Internship</h3><p>Role + result</p></div>
+
+        <div class="step anim"><span class="n">05</span>
+          <div class="dot"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Skills</h3><p>3–4 relevant</p></div>
+
+        <div class="step anim"><span class="n">06</span>
+          <div class="dot"><i class="fa-solid fa-trophy"></i></div>
+          <h3>Achievements</h3><p>With numbers</p></div>
+
+        <div class="step anim"><span class="n">07</span>
+          <div class="dot"><i class="fa-solid fa-flag"></i></div>
+          <h3>Career Goal</h3><p>Short &amp; clear</p></div>
       </div>
+      <div class="note anim"><b>Order matters.</b> Same 7 blocks every interview — practise until it flows.</div>
     </section>
 
-    <!-- ============ 4 · PAST PRESENT FUTURE ============ -->
+    <!-- ============ 4 · EMPHASIS SPLIT ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-timeline"></i> The Formula</span>
-        <h2>Past → Present → Future</h2>
-        <p class="sub">Most of the time goes to what you have done. Very little to dreams.</p>
+        <span class="kicker"><i class="fa-solid fa-timeline"></i> Focus</span>
+        <h2>Where To Give More Detail</h2>
+        <p class="sub">Spend most words on what you have done. Keep the goal brief.</p>
       </div>
-      <div class="body g3">
+      <div class="body g3 center">
         <div class="card anim"><div class="ic"><i class="fa-solid fa-clock-rotate-left"></i></div>
-          <h3>PAST · 60%</h3>
+          <h3>PAST · Most detail</h3>
           <ul class="list">
+            <li>Family</li>
             <li>Education</li>
             <li>Internship</li>
             <li>Projects</li>
           </ul></div>
         <div class="card anim"><div class="ic cyan"><i class="fa-solid fa-bolt"></i></div>
-          <h3>PRESENT · 30%</h3>
+          <h3>PRESENT · Brief</h3>
           <ul class="list">
-            <li>Skills you use now</li>
-            <li>What you are learning</li>
-            <li>Why you fit today</li>
+            <li>Your skills</li>
+            <li>Learning now</li>
+            <li>Why you fit</li>
           </ul></div>
         <div class="card anim"><div class="ic green"><i class="fa-solid fa-arrow-trend-up"></i></div>
-          <h3>FUTURE · 10%</h3>
+          <h3>FUTURE · Shortest</h3>
           <ul class="list">
-            <li>Your 3-year goal</li>
-            <li>How this role helps</li>
-            <li>One line only</li>
+            <li>3-year goal</li>
+            <li>This role helps</li>
+            <li>Keep it short</li>
           </ul></div>
       </div>
       <div class="body" style="flex:none;margin-top:14px">
         <div class="bar anim">
-          <div class="b1">Past</div><div class="b2">Present</div><div class="b3">Future</div>
+          <div class="b1">Past</div><div class="b2">Present</div><div class="b3">Goal</div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 5 · IDEAL SCRIPT ============ -->
+    <!-- ============ 5 · SAMPLE SCRIPT ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-scroll"></i> The Ideal Answer</span>
-        <h2>A Ready Script — Say It Your Way</h2>
+        <span class="kicker"><i class="fa-solid fa-scroll"></i> Sample Answer</span>
+        <h2>A Ready Script</h2>
       </div>
       <div class="body center">
         <div class="script anim">
-          Hi, I'm <span class="k1">[Your Name]</span>, a final-year Computer Science student at
-          <span class="k2">[College]</span>. I've built
-          <span class="k3">[Project Name]</span> using <span class="k3">[Tech]</span>, which
-          <span class="k3">[result in one line]</span>. I also interned at
-          <span class="k3">[Company]</span>, where I <span class="k3">[action + outcome]</span>.
-          I'm comfortable with <span class="k4">[3 skills]</span>, and I'm looking for a role
-          where I can grow as a <span class="k5">[target role]</span> and contribute from day one.
+          Hi, I'm <span class="k1">[Your Name]</span> from <span class="k1">[City]</span>.
+          My father, <span class="k2">[Name, occupation]</span>, and my mother,
+          <span class="k2">[Name, occupation]</span>; I have <span class="k2">[one sibling / no siblings]</span>.
+          I'm a final-year CS student at <span class="k3">[College]</span>. I built
+          <span class="k4">[Project]</span> using <span class="k4">[Tech]</span>, which
+          <span class="k4">[result]</span>. I interned at <span class="k4">[Company]</span>,
+          where I <span class="k4">[outcome]</span>. I'm good at
+          <span class="k5">[3 skills]</span>, and I want to grow as a
+          <span class="k6">[target role]</span>.
         </div>
         <div class="legend anim">
           <span><i style="background:#7c5cff"></i> Name</span>
+          <span><i style="background:#fb923c"></i> Family</span>
           <span><i style="background:#22d3ee"></i> Education</span>
-          <span><i style="background:#f472b6"></i> Proof of work</span>
+          <span><i style="background:#f472b6"></i> Work</span>
           <span><i style="background:#fbbf24"></i> Skills</span>
           <span><i style="background:#34d399"></i> Goal</span>
         </div>
       </div>
-      <div class="note anim"><b>Time it:</b> 60–90 seconds. If it runs past 2 minutes, cut the family and hobby parts.</div>
+      <div class="note anim"><b>Keep it short and precise.</b> Do not rush — speak calmly and clearly.</div>
     </section>
 
-    <!-- ============ 6 · NAME ============ -->
+    <!-- ============ 6 · NAME (Block 1) ============ -->
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-id-badge"></i> Block 1</span>
         <h2>Name &amp; Basics</h2>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card do anim">
-          <div class="ic green"><i class="fa-solid fa-check"></i></div>
+          <div class="ic xl green"><i class="fa-solid fa-check"></i></div>
           <h3>DO</h3>
           <ul class="list tick">
-            <li>“I'm <b>Rahul Sharma</b>”</li>
-            <li>Add city in one line</li>
-            <li>One line role: <b>“final-year CS student”</b></li>
-            <li>Smile before you speak</li>
+            <li>Full name</li>
+            <li>City</li>
+            <li>Your role in one short line</li>
+            <li>Smile first</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ “Myself Rahul”</li>
-            <li>❌ Full home address</li>
-            <li>❌ Nicknames or pet names</li>
-            <li>❌ Age unless asked</li>
+            <li>“Myself Rahul”</li>
+            <li>Home address</li>
+            <li>Nicknames</li>
+            <li>Age talk</li>
           </ul>
         </div>
       </div>
-      <div class="note anim"><b>Speak it:</b> “Hi, I'm Rahul Sharma from Pune — a final-year Computer Science student.” That's it. Move on.</div>
+      <div class="note anim"><b>Say:</b> “Hi, I'm Rahul Sharma from Pune — a final-year CS student.” Short and precise.</div>
     </section>
 
-    <!-- ============ 7 · FAMILY ============ -->
+    <!-- ============ 7 · FAMILY (Block 2) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-house"></i> Block 1b</span>
+        <span class="kicker"><i class="fa-solid fa-house"></i> Block 2</span>
         <h2>Family Background</h2>
-        <p class="sub">One sentence maximum. It is context, not the story.</p>
+        <p class="sub">Cover these 4 points. Keep each point short and precise.</p>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card do anim">
-          <div class="ic green"><i class="fa-solid fa-check"></i></div>
-          <h3>DO</h3>
+          <div class="ic xl green"><i class="fa-solid fa-check"></i></div>
+          <h3>COVER THESE 4 POINTS</h3>
           <ul class="list tick">
-            <li><b>One line:</b> “My father runs a business, my mother is a teacher.”</li>
-            <li>Mention if it shaped your <b>work ethic</b></li>
-            <li>Keep it positive and short</li>
+            <li>Father — name + occupation</li>
+            <li>Mother — name + occupation</li>
+            <li>Siblings — how many + what they do</li>
+            <li>One short line on values</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
-          <h3>DON'T</h3>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
+          <h3>DON'T SAY</h3>
           <ul class="list cross">
-            <li>❌ Relatives' jobs and family history</li>
-            <li>❌ Personal or financial problems</li>
-            <li>❌ More than 2 sentences</li>
+            <li>Relatives' details</li>
+            <li>Salary, loans, property</li>
+            <li>Family problems</li>
+            <li>Long emotional stories</li>
           </ul>
         </div>
       </div>
-      <div class="note anim"><b>Shortcut:</b> if your family background isn't relevant, skip it. Nobody marks you down for leaving it out.</div>
+      <div class="example anim">
+        <span class="lbl">Practical example</span>
+        “My father, <b>Mr. Rajesh Sharma</b>, runs a textile business. My mother,
+        <b>Mrs. Sunita Sharma</b>, is a homemaker. I have <b>one younger brother</b>
+        studying engineering. My family has always supported my studies and taught me
+        <b>discipline</b>.”
+      </div>
     </section>
 
-    <!-- ============ 8 · EDUCATION ============ -->
+    <!-- ============ 8 · EDUCATION (Block 3) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-graduation-cap"></i> Block 2</span>
+        <span class="kicker"><i class="fa-solid fa-graduation-cap"></i> Block 3</span>
         <h2>Education Background</h2>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card do anim">
-          <div class="ic green"><i class="fa-solid fa-check"></i></div>
+          <div class="ic xl green"><i class="fa-solid fa-check"></i></div>
           <h3>DO</h3>
           <ul class="list tick">
-            <li>Degree + college + year</li>
-            <li>CGPA only if <b>7.5+</b></li>
-            <li>Name <b>2 relevant subjects</b></li>
-            <li>Mention a final-year project if strong</li>
+            <li>Degree + college</li>
+            <li>Year of passing</li>
+            <li>CGPA if 7.5 or above</li>
+            <li>2 relevant subjects</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ School marks and 10th/12th details</li>
-            <li>❌ Every subject you studied</li>
-            <li>❌ Backlogs unless asked</li>
+            <li>10th / 12th marks</li>
+            <li>Every subject</li>
+            <li>Backlogs</li>
           </ul>
         </div>
       </div>
-      <div class="note anim"><b>Example:</b> “I completed my B.Tech in Computer Science from XYZ College in 2025, with a CGPA of 8.2.”</div>
+      <div class="note anim"><b>Say:</b> “B.Tech in CS from XYZ College, 2025, CGPA 8.2.” Keep it short.</div>
     </section>
 
-    <!-- ============ 9 · INTERNSHIP ============ -->
+    <!-- ============ 9 · INTERNSHIP (Block 4) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-briefcase"></i> Block 3</span>
+        <span class="kicker"><i class="fa-solid fa-briefcase"></i> Block 4</span>
         <h2>Internship</h2>
-        <p class="sub">Company + role + one outcome. Nothing else.</p>
+        <p class="sub">Company, role, and one clear result.</p>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card anim">
-          <div class="ic cyan"><i class="fa-solid fa-list-check"></i></div>
-          <h3>The 4-Part Line</h3>
-          <div class="formula">At <b>[Company]</b> as a <b>[role]</b> for <b>[duration]</b>, I <b>[action + result]</b>.</div>
+          <div class="ic xl cyan"><i class="fa-solid fa-list-check"></i></div>
+          <h3>The Line</h3>
+          <div class="formula">At <b>[Company]</b> as <b>[role]</b>, I <b>[result]</b>.</div>
           <ul class="list" style="margin-top:12px">
-            <li>✅ “At Infosys as a backend intern for 3 months, I built 6 REST APIs used by an internal dashboard.”</li>
+            <li>✅ “At Infosys, I built 6 REST APIs.”</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ List daily tasks</li>
-            <li>❌ Complain about the company</li>
-            <li>❌ Say “I just did training”</li>
-            <li>❌ Claim work you didn't do</li>
+            <li>Daily task list</li>
+            <li>Complaints</li>
+            <li>“Just training”</li>
+            <li>Fake work</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ 10 · PROJECTS ============ -->
+    <!-- ============ 10 · PROJECTS (Block 4b) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-code"></i> Block 4</span>
+        <span class="kicker"><i class="fa-solid fa-code"></i> Block 4b</span>
         <h2>Projects</h2>
-        <p class="sub">Two projects, said well, beat eight said badly.</p>
+        <p class="sub">Two explained clearly is better than many listed.</p>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card anim">
-          <div class="ic pink"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h3>One-Line Formula</h3>
+          <div class="ic xl pink"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>The Line</h3>
           <div class="formula">Built <b>[what]</b> using <b>[tech]</b> that <b>[result]</b>.</div>
           <ul class="list" style="margin-top:12px">
-            <li>✅ “Built a React expense tracker with Node and MongoDB, now used by 50+ students.”</li>
-            <li>Mention the <b>live link</b> or GitHub</li>
+            <li>✅ “React expense tracker, 50+ users.”</li>
+            <li>Mention live link or GitHub</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ Explain the full architecture</li>
-            <li>❌ Name tutorial clone projects only</li>
-            <li>❌ List 8 projects</li>
+            <li>Full architecture</li>
+            <li>Tutorial clones only</li>
+            <li>Long project list</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ 11 · EXPERIENCE ============ -->
+    <!-- ============ 11 · EXPERIENCE (Block 4c) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-user-tie"></i> Block 4b</span>
+        <span class="kicker"><i class="fa-solid fa-user-tie"></i> Block 4c</span>
         <h2>Any Real Experience Counts</h2>
-        <p class="sub">Fresher does not mean zero experience.</p>
       </div>
-      <div class="body g3">
-        <div class="card anim"><div class="ic"><i class="fa-solid fa-laptop-code"></i></div>
-          <h3>Freelance Work</h3>
-          <ul class="list"><li>Client name (if allowed)</li><li>What you delivered</li></ul></div>
-        <div class="card anim"><div class="ic cyan"><i class="fa-solid fa-users"></i></div>
-          <h3>College Tech Team</h3>
-          <ul class="list"><li>Club or fest role</li><li>Team size handled</li></ul></div>
-        <div class="card anim"><div class="ic green"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <h3>Teaching / Tutoring</h3>
-          <ul class="list"><li>Shows communication</li><li>Great for soft skills</li></ul></div>
+      <div class="body g3 center">
+        <div class="card anim"><div class="ic xl"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Freelance</h3>
+          <ul class="list"><li>Client work</li><li>What you built</li></ul></div>
+        <div class="card anim"><div class="ic xl cyan"><i class="fa-solid fa-users"></i></div>
+          <h3>College Team</h3>
+          <ul class="list"><li>Club role</li><li>Team size</li></ul></div>
+        <div class="card anim"><div class="ic xl green"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Tutoring</h3>
+          <ul class="list"><li>Shows clarity</li><li>Soft skills</li></ul></div>
       </div>
-      <div class="note anim"><b>Never fake experience.</b> One honest “I built this myself” beats an invented internship.</div>
+      <div class="note anim"><b>Never fake.</b> One honest project beats a fake internship.</div>
     </section>
 
-    <!-- ============ 12 · SKILLS ============ -->
+    <!-- ============ 12 · SKILLS (Block 5) ============ -->
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-screwdriver-wrench"></i> Block 5</span>
         <h2>Skills &amp; Certifications</h2>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card do anim">
-          <div class="ic green"><i class="fa-solid fa-check"></i></div>
+          <div class="ic xl green"><i class="fa-solid fa-check"></i></div>
           <h3>DO</h3>
           <ul class="list tick">
-            <li>3–4 skills <b>from the job description</b></li>
-            <li>One language + one tool + one cloud</li>
-            <li>One certification, maximum</li>
-            <li>Say what you can <b>build</b>, not just “know”</li>
+            <li>3–4 relevant skills</li>
+            <li>Match the job description</li>
+            <li>One certification</li>
+            <li>Say what you can build</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ “I know everything”</li>
-            <li>❌ 20 skills in one breath</li>
-            <li>❌ MS Word and typing speed</li>
-            <li>❌ Skills you can't answer questions on</li>
+            <li>“I know everything”</li>
+            <li>20 skills at once</li>
+            <li>MS Word / typing speed</li>
+            <li>Bluffing</li>
           </ul>
         </div>
       </div>
-      <div class="note anim"><b>Test:</b> if they ask “show me one thing you built with it”, every listed skill must pass.</div>
+      <div class="note anim"><b>Test:</b> can you build one thing with each skill? Then list it.</div>
     </section>
 
-    <!-- ============ 13 · ACHIEVEMENTS ============ -->
+    <!-- ============ 13 · ACHIEVEMENTS (Block 6) ============ -->
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-trophy"></i> Block 6</span>
         <h2>Achievements</h2>
-        <p class="sub">Numbers make people remember you.</p>
+        <p class="sub">Numbers make you memorable.</p>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card anim">
-          <div class="ic amber"><i class="fa-solid fa-medal"></i></div>
-          <h3>What to Pick</h3>
+          <div class="ic xl amber"><i class="fa-solid fa-medal"></i></div>
+          <h3>Pick</h3>
           <ul class="list">
-            <li>Hackathon rank or participation</li>
-            <li>Scholarship or academic rank</li>
-            <li>Open-source contributions</li>
-            <li>Published paper or blog</li>
-            <li>Competition with a <b>number</b> attached</li>
+            <li>Hackathon</li>
+            <li>Scholarship</li>
+            <li>Open source</li>
+            <li>Published paper</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ School drawing prizes</li>
-            <li>❌ Attendance certificates</li>
-            <li>❌ Anything you can't explain</li>
+            <li>School prizes</li>
+            <li>Attendance certificates</li>
+            <li>Anything you can't explain</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ 14 · HOBBIES ============ -->
+    <!-- ============ 14 · HOBBIES (Block 6b) ============ -->
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-heart"></i> Block 6b</span>
-        <h2>Hobbies &amp; Extras</h2>
-        <p class="sub">Keep 1–2 that show a trait: discipline, teamwork or creativity.</p>
+        <h2>Hobbies</h2>
+        <p class="sub">Pick ones that show a trait.</p>
       </div>
-      <div class="body g3">
-        <div class="card anim"><div class="ic green"><i class="fa-solid fa-person-running"></i></div>
-          <h3>Shows Discipline</h3><ul class="list"><li>Sport, gym, running</li></ul></div>
-        <div class="card anim"><div class="ic cyan"><i class="fa-solid fa-pen-nib"></i></div>
-          <h3>Shows Creativity</h3><ul class="list"><li>Blogging, design, music</li></ul></div>
-        <div class="card anim"><div class="ic pink"><i class="fa-solid fa-people-group"></i></div>
-          <h3>Shows Teamwork</h3><ul class="list"><li>Clubs, volunteering</li></ul></div>
+      <div class="body g3 center">
+        <div class="card anim"><div class="ic xl green"><i class="fa-solid fa-person-running"></i></div>
+          <h3>Discipline</h3><ul class="list"><li>Sport / gym</li></ul></div>
+        <div class="card anim"><div class="ic xl cyan"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Creativity</h3><ul class="list"><li>Blog / design</li></ul></div>
+        <div class="card anim"><div class="ic xl pink"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Teamwork</h3><ul class="list"><li>Clubs / volunteering</li></ul></div>
       </div>
-      <div class="note anim"><b>Safe answer:</b> “I enjoy badminton and I write short tech blogs.” Two lines. Done.</div>
+      <div class="note anim"><b>Keep it short:</b> “I play badminton and write tech blogs.”</div>
     </section>
 
-    <!-- ============ 15 · CAREER GOAL ============ -->
+    <!-- ============ 15 · CAREER GOAL (Block 7) ============ -->
     <section class="slide">
       <div class="head anim">
-        <span class="kicker"><i class="fa-solid fa-flag"></i> Block 6c</span>
-        <h2>Career Goal — The Closing Line</h2>
+        <span class="kicker"><i class="fa-solid fa-flag"></i> Block 7</span>
+        <h2>Career Goal</h2>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card do anim">
-          <div class="ic green"><i class="fa-solid fa-check"></i></div>
+          <div class="ic xl green"><i class="fa-solid fa-check"></i></div>
           <h3>DO</h3>
           <ul class="list tick">
-            <li>“In 3 years I want to be a strong <b>backend engineer</b>.”</li>
-            <li>Tie it to <b>this role</b> and <b>this company</b></li>
-            <li>End with confidence, not apology</li>
+            <li>3-year goal</li>
+            <li>Tie it to this role</li>
+            <li>Be confident</li>
           </ul>
         </div>
         <div class="card dont anim">
-          <div class="ic red"><i class="fa-solid fa-xmark"></i></div>
+          <div class="ic xl red"><i class="fa-solid fa-xmark"></i></div>
           <h3>DON'T</h3>
           <ul class="list cross">
-            <li>❌ “I want to go abroad”</li>
-            <li>❌ “I want to start my own company”</li>
-            <li>❌ “I want to learn everything”</li>
-            <li>❌ “I'll do anything you give me”</li>
+            <li>“Go abroad”</li>
+            <li>“Own company”</li>
+            <li>“Learn everything”</li>
+            <li>“Anything you give”</li>
           </ul>
         </div>
       </div>
@@ -743,17 +812,17 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-check-double"></i> Checklist</span>
-        <h2>8 Things You Must Do</h2>
+        <h2>8 Things To Do</h2>
       </div>
-      <div class="body g2 rows2">
-        <div class="card do anim"><h3>1 · Keep it 60–90 seconds</h3></div>
-        <div class="card do anim"><h3>2 · Follow the 6-block order</h3></div>
-        <div class="card do anim"><h3>3 · Use numbers and results</h3></div>
-        <div class="card do anim"><h3>4 · Mirror the job description</h3></div>
-        <div class="card do anim"><h3>5 · Speak in “I”, not “we”</h3></div>
-        <div class="card do anim"><h3>6 · Pause between blocks</h3></div>
-        <div class="card do anim"><h3>7 · End with your goal</h3></div>
-        <div class="card do anim"><h3>8 · Practice out loud, on camera</h3></div>
+      <div class="body g2">
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Keep it short &amp; precise</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Follow the 7 blocks</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Use numbers and results</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Mirror the job description</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Say “I”, not “we”</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Speak calmly, do not rush</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>End with your goal</div></div>
+        <div class="card do anim"><div class="checkline ok"><i class="fa-solid fa-check"></i>Practise out loud on camera</div></div>
       </div>
     </section>
 
@@ -761,17 +830,17 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-ban"></i> Checklist</span>
-        <h2>8 Things That Kill Your Answer</h2>
+        <h2>8 Things That Kill It</h2>
       </div>
-      <div class="body g2 rows2">
-        <div class="card dont anim"><h3>1 · “Myself Rahul…”</h3></div>
-        <div class="card dont anim"><h3>2 · Repeating your resume</h3></div>
-        <div class="card dont anim"><h3>3 · Long family history</h3></div>
-        <div class="card dont anim"><h3>4 · “I'm a hardworking team player”</h3></div>
-        <div class="card dont anim"><h3>5 · Complaining about anyone</h3></div>
-        <div class="card dont anim"><h3>6 · Memorised, robotic tone</h3></div>
-        <div class="card dont anim"><h3>7 · Talking for 5 minutes</h3></div>
-        <div class="card dont anim"><h3>8 · Saying “that's all” at the end</h3></div>
+      <div class="body g2">
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>“Myself Rahul”</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Repeating your resume</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Long family stories</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>“I'm hardworking”</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Complaining about anyone</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Robotic, memorised tone</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Rambling on and on</div></div>
+        <div class="card dont anim"><div class="checkline no"><i class="fa-solid fa-xmark"></i>Ending with “that's all”</div></div>
       </div>
     </section>
 
@@ -779,21 +848,21 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-microphone"></i> Delivery</span>
-        <h2>How You Say It Matters More</h2>
+        <h2>How You Say It</h2>
       </div>
-      <div class="body g3 rows2">
-        <div class="card anim"><div class="ic"><i class="fa-solid fa-eye"></i></div>
-          <h3>Eye Contact</h3><ul class="list"><li>Look at the speaker</li></ul></div>
-        <div class="card anim"><div class="ic cyan"><i class="fa-solid fa-gauge-high"></i></div>
-          <h3>Pace</h3><ul class="list"><li>Slower than you think</li></ul></div>
-        <div class="card anim"><div class="ic green"><i class="fa-solid fa-face-smile"></i></div>
-          <h3>Smile</h3><ul class="list"><li>Especially at the start</li></ul></div>
-        <div class="card anim"><div class="ic amber"><i class="fa-solid fa-hands"></i></div>
-          <h3>Hands</h3><ul class="list"><li>Relaxed, not in pockets</li></ul></div>
-        <div class="card anim"><div class="ic pink"><i class="fa-solid fa-pause"></i></div>
-          <h3>Pause</h3><ul class="list"><li>Silence beats “umm”</li></ul></div>
-        <div class="card anim"><div class="ic"><i class="fa-solid fa-volume-high"></i></div>
-          <h3>Volume</h3><ul class="list"><li>Clear, not loud</li></ul></div>
+      <div class="body g3">
+        <div class="card anim"><div class="ic xl cyan"><i class="fa-solid fa-eye"></i></div>
+          <h3>Eye Contact</h3></div>
+        <div class="card anim"><div class="ic xl"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Calm Pace</h3></div>
+        <div class="card anim"><div class="ic xl green"><i class="fa-solid fa-face-smile"></i></div>
+          <h3>Smile</h3></div>
+        <div class="card anim"><div class="ic xl amber"><i class="fa-solid fa-hands"></i></div>
+          <h3>Relaxed Hands</h3></div>
+        <div class="card anim"><div class="ic xl pink"><i class="fa-solid fa-pause"></i></div>
+          <h3>Pause, Not “Umm”</h3></div>
+        <div class="card anim"><div class="ic xl blue"><i class="fa-solid fa-volume-high"></i></div>
+          <h3>Clear Voice</h3></div>
       </div>
     </section>
 
@@ -801,29 +870,29 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
     <section class="slide">
       <div class="head anim">
         <span class="kicker"><i class="fa-solid fa-dumbbell"></i> Practice</span>
-        <h2>7-Day Plan + Likely Follow-ups</h2>
+        <h2>7-Day Plan + Follow-ups</h2>
       </div>
-      <div class="body g2">
+      <div class="body g2 center">
         <div class="card anim">
-          <div class="ic cyan"><i class="fa-solid fa-calendar-days"></i></div>
+          <div class="ic xl cyan"><i class="fa-solid fa-calendar-days"></i></div>
           <h3>One Week</h3>
           <ul class="list">
-            <li><b>Day 1–2:</b> write the 6 blocks</li>
-            <li><b>Day 3–4:</b> say it out loud, record</li>
-            <li><b>Day 5:</b> cut it to 90 seconds</li>
-            <li><b>Day 6:</b> say it to a friend</li>
-            <li><b>Day 7:</b> final polish, no memorising</li>
+            <li>Day 1–2 · Write the 7 blocks</li>
+            <li>Day 3–4 · Record yourself</li>
+            <li>Day 5 · Trim extra words</li>
+            <li>Day 6 · Say it to a friend</li>
+            <li>Day 7 · Final polish</li>
           </ul>
         </div>
         <div class="card anim">
-          <div class="ic amber"><i class="fa-solid fa-circle-question"></i></div>
+          <div class="ic xl amber"><i class="fa-solid fa-circle-question"></i></div>
           <h3>Be Ready For</h3>
           <ul class="list">
-            <li>“Why this company?”</li>
-            <li>“Tell me about that project.”</li>
-            <li>“What's your biggest weakness?”</li>
-            <li>“Where do you see yourself in 5 years?”</li>
-            <li>“Why should we hire you?”</li>
+            <li>Why this company?</li>
+            <li>Tell me about that project</li>
+            <li>What's your weakness?</li>
+            <li>Where do you see yourself in 5 years?</li>
+            <li>Why should we hire you?</li>
           </ul>
         </div>
       </div>
@@ -836,14 +905,14 @@ ul.cross li::before{content:'\f00d';font-family:'Font Awesome 6 Free';font-weigh
         <h2>Your Cheat Sheet</h2>
       </div>
       <div class="body truths">
-        <div class="row anim"><span class="num">01</span><div><h3>Name &amp; education in two lines</h3><p>No “myself”, no full address.</p></div></div>
-        <div class="row anim"><span class="num">02</span><div><h3>Internship and projects with numbers</h3><p>Two examples are enough.</p></div></div>
-        <div class="row anim"><span class="num">03</span><div><h3>Skills that match the job description</h3><p>Only what you can defend.</p></div></div>
-        <div class="row anim"><span class="num">04</span><div><h3>End with a clear career goal</h3><p>Tie it to this role.</p></div></div>
-        <div class="row anim"><span class="num">05</span><div><h3>60–90 seconds, practised out loud</h3><p>Confidence comes from repetition.</p></div></div>
+        <div class="row anim"><span class="num">01</span><div><h3>Name — name, city, your role</h3></div></div>
+        <div class="row anim"><span class="num">02</span><div><h3>Family — father, mother, siblings, values</h3></div></div>
+        <div class="row anim"><span class="num">03</span><div><h3>Education — degree, college, year</h3></div></div>
+        <div class="row anim"><span class="num">04</span><div><h3>Work — internship and projects with numbers</h3></div></div>
+        <div class="row anim"><span class="num">05</span><div><h3>Skills + Goal — what you can defend, where you're going</h3></div></div>
       </div>
       <div class="note anim" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
-        <span><b>That's it.</b> Now record yourself once and fix one thing at a time.</span>
+        <span><b>Record yourself once.</b> Fix one thing at a time. Keep it short and precise.</span>
         <span style="color:var(--g2);font-weight:600;white-space:nowrap">All the best <i class="fa-solid fa-star"></i></span>
       </div>
     </section>
@@ -886,7 +955,6 @@ function show(n){
   counter.textContent =
     String(cur + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
 
-  /* on phones, jump back to the top of the new slide */
   if (mobile.matches) window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
@@ -896,13 +964,11 @@ const prev = () => show(cur - 1);
 document.getElementById('next').onclick = next;
 document.getElementById('prev').onclick = prev;
 
-/* fullscreen */
 document.getElementById('fs').onclick = () => {
   if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
   else document.exitFullscreen?.();
 };
 
-/* keyboard */
 addEventListener('keydown', e => {
   const k = e.key;
   if (['ArrowRight','ArrowDown','PageDown',' '].includes(k)) { e.preventDefault(); next(); }
@@ -912,7 +978,6 @@ addEventListener('keydown', e => {
   else if (k === 'f' || k === 'F') document.getElementById('fs').click();
 });
 
-/* swipe */
 let sx = 0, sy = 0;
 addEventListener('touchstart', e => {
   sx = e.touches[0].clientX; sy = e.touches[0].clientY;
@@ -926,7 +991,6 @@ addEventListener('touchend', e => {
   }
 }, { passive: true });
 
-/* scale the 1280x720 stage on desktop only */
 function fit(){
   if (mobile.matches) { stage.style.transform = 'none'; return; }
   const scale = Math.min(innerWidth / 1280, innerHeight / 720) * 0.94;
@@ -936,7 +1000,6 @@ addEventListener('resize', fit);
 mobile.addEventListener('change', fit);
 fit();
 
-/* fade hint */
 setTimeout(() => { document.getElementById('hint').style.opacity = '0'; }, 6000);
 
 show(0);
